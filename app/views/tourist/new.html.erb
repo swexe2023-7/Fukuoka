@@ -1,0 +1,22 @@
+<%= link_to root_path, class: 'logo', method: :get do %>
+  <div>
+    <%= image_tag "logo.png" %>
+  </div>
+<% end %>
+<hr>
+
+<%= form_for @tourist, url: {action: :create} do |f| %>
+<p>
+    <%= f.label :uid, "ユーザーID" %>
+    <%= f.text_field :uid %>
+</p>
+<p>
+    <%= f.label :password, 'パスワード' %>
+    <%= f.password_field :password %>
+</p>
+<p>
+    <%= f.label :password_confirmation, 'パスワード(確認)' %>
+    <%= f.password_field :password_confirmation %>
+    <%= f.submit '登録' %>
+</p>
+<% end %>

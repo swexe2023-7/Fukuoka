@@ -1,6 +1,15 @@
-<div class = 'logo'>
-    <%= image_tag 'logo.png' %>
-</div>
+<%= link_to root_path, class: 'logo', method: :get do %>
+  <div>
+    <%= image_tag "logo.png" %>
+  </div>
+<% end %>
+
+<% if current_user %>
+  <%= link_to "マイページへ" ,tourist_show_path %>
+  <%= link_to "ログアウト" ,sessions_logout_path %>
+<% else %>
+  <%= link_to "ログイン", sessions_main_path %>
+<% end %>
 
 <div id="humberger">
   <div></div>
