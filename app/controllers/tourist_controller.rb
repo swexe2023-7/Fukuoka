@@ -10,8 +10,10 @@ class TouristController < ApplicationController
       password_confirmation: params[:tourist][:password_confirmation])
 
     if @tourist.save
+      puts "OK"
       redirect_to root_path
     else
+      puts "NG"
       render 'new'
     end
   end
