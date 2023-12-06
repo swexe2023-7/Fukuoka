@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'spots/index'
+  get 'spots/show'
   get 'tourist/new'
   get 'tourist/create'
   get 'tourist/destroy'
