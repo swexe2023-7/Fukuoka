@@ -24,8 +24,33 @@
 
 <div class = 'map'>
     <%= image_tag 'map.png' %>
-    <p>筑後</p>
+    <p0>筑後</p0>
     <p1>福岡</p1>
     <p2>北九州</p2>
     <p3>筑豊</p3>
+</div>
+
+<div class="search">
+<form method="get" action="https://www.google.co.jp/search" target="_blank">
+<input type="text" name="q" class="text" size="31" maxlength="255" value="">
+<input type="submit" name="bt" class="button" value="検索">
+<input type="hidden" name="hl" value="ja">
+<input type="hidden" name="sitesearch" value="ドメイン.com">
+</form>
+</div>
+
+<div class="age">
+<select name="age">
+<option value="">選択してください</option>
+<option value="18歳未満">18歳未満</option>
+<option value="18-25歳">18-25歳</option>
+<option value="26-35歳">26-35歳</option>
+<option value="35-49歳">35-49歳</option>
+<option value="50歳以上">50歳以上</option>
+</select>
+</div>
+
+
+<div class="calendar">
+<input type="date" name="calendar" max="9999-12-31">
 </div>
