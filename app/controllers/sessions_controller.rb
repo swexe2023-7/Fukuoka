@@ -10,8 +10,6 @@ class SessionsController < ApplicationController
 
   def login
     tourist = Tourist.find_by(uid: params[:uid])
-    puts tourist
-    puts tourist.pass
     if tourist && BCrypt::Password.new(tourist.pass) == params[:pass]
       session[:login_uid] = params[:uid]
       redirect_to root_path
