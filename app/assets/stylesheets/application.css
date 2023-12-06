@@ -19,6 +19,37 @@
     margin-top: 14px;
 }
 
+#humberger {
+  float: right;
+  position: relative;
+  height: 46px;
+  width: 46px;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 2px solid #444;
+  border-radius: 4px;
+}
+#humberger div {
+  position: absolute;
+  left: 7px;
+  height: 2px;
+  width: 28px;
+  background-color: #444;
+  border-radius: 2px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+#humberger div:nth-of-type(1) {
+  bottom: 30px;
+}
+#humberger div:nth-of-type(2) {
+  bottom: 20px;
+}
+#humberger div:nth-of-type(3) {
+  bottom: 10px;
+}
+
 .map img{
   width: 100%;
   text-align: center;
@@ -38,6 +69,7 @@
 }
 
 
+<<<<<<< HEAD
 /*p{*/
 /*    position: absolute;*/
 /*    top:65%;*/
@@ -48,9 +80,20 @@
 /*    font-size:40px;*/
 /*    color: red;*/
 /*    border: solid 1px #454545;*/
+=======
+p0{
+    position: absolute;
+    top:65%;
+    left:155%;
+    transform: translate(-50%,-50%);
+    padding:0;
+    margin:0;
+    font-size:40px;
+    color: red;
+    border: solid 1px #454545;
+>>>>>>> Y
     
 /*}*/
-
 
 p1{
   position: absolute;
@@ -90,38 +133,33 @@ p3{
     border: solid 1px #454545;
 }
 
-
-#humberger {
-  float: right;
-  position: relative;
-  height: 46px;
-  width: 46px;
-  display: inline-block;
-  box-sizing: border-box;
-  background-color: #fff;
-  border: 2px solid #444;
-  border-radius: 4px;
-}
-#humberger div {
-  position: absolute;
-  left: 7px;
-  height: 2px;
-  width: 28px;
-  background-color: #444;
-  border-radius: 2px;
-  display: inline-block;
-  box-sizing: border-box;
-}
-#humberger div:nth-of-type(1) {
-  bottom: 30px;
-}
-#humberger div:nth-of-type(2) {
-  bottom: 20px;
-}
-#humberger div:nth-of-type(3) {
-  bottom: 10px;
-}
-
 .hr1{
   border-top: 1px solid #000;
+}
+
+.search .text{
+  margin: 0;
+  padding: 0.5em;
+  width: 30%;
+  height: 60px;
+  color: #aaa;
+  border: solid 1px #aaa;
+  border-radius: 2px;
+  position: relative;
+  text-align: center;
+}
+.search .button{
+  margin: 0;
+  padding: 0.5em;
+  color: #fff;
+  height: 48px;
+  width: 68px;
+  border: 0;
+  background: skyblue;
+  border-radius: 4px;
+  position: relative;
+}
+
+.age{
+ 
 }
