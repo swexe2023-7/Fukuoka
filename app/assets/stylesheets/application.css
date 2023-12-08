@@ -66,22 +66,20 @@
     width:600px;
     height: 600px;
     position: relative;
+    display: block;
+    text-align: center;
 }
 
 
-<<<<<<< HEAD
-/*p{*/
-/*    position: absolute;*/
-/*    top:65%;*/
-/*    left:155%;*/
-/*    transform: translate(-50%,-50%);*/
-/*    padding:0;*/
-/*    margin:0;*/
-/*    font-size:40px;*/
-/*    color: red;*/
-/*    border: solid 1px #454545;*/
-=======
-p0{
+/*<<<<<<< HEAD
+
+
+
+/*>>>>>>> Y
+    
+/*}*/
+
+#chikugo{
     position: absolute;
     top:65%;
     left:155%;
@@ -90,13 +88,12 @@ p0{
     margin:0;
     font-size:40px;
     color: red;
-    border: solid 1px #454545;
->>>>>>> Y
-    
-/*}*/
+    border: dashed 2px skyblue;
+}
 
-p1{
-  position: absolute;
+
+#fukuoka{
+    position: absolute;
     top:30%;
     left:145%;
     transform: translate(-50%,-50%);
@@ -104,11 +101,11 @@ p1{
     margin:0;
     font-size:40px;
     color: blue;
-    border: solid 1px #454545;
+    border: dashed 2px skyblue;
 }
 
 
-p2{
+#kitakyusyu{
   position: absolute;
     top:30%;
     left:177%;
@@ -117,11 +114,11 @@ p2{
     margin:0;
     font-size:40px;
     color: yellow;
-    border: solid 1px #454545;
+    border: dashed 2px skyblue;
 }
 
 
-p3{
+#chikuho{
   position: absolute;
     top:40%;
     left:160%;
@@ -130,36 +127,53 @@ p3{
     margin:0;
     font-size:40px;
     color: green;
-    border: solid 1px #454545;
+    border: dashed 2px skyblue;
 }
 
 .hr1{
   border-top: 1px solid #000;
 }
 
-.search .text{
-  margin: 0;
-  padding: 0.5em;
-  width: 30%;
-  height: 60px;
-  color: #aaa;
-  border: solid 1px #aaa;
-  border-radius: 2px;
-  position: relative;
-  text-align: center;
-}
-.search .button{
-  margin: 0;
-  padding: 0.5em;
-  color: #fff;
-  height: 48px;
-  width: 68px;
-  border: 0;
-  background: skyblue;
-  border-radius: 4px;
-  position: relative;
+
+
+select{
+  margin:20px;
+  padding:10px;
+  margin-top: 0px;
 }
 
-.age{
- 
+.search_container{
+  position: relative;
+  box-sizing: border-box;
+}
+.search_container input[type="text"]{
+  border: none;
+  height: 1.8em;
+}
+.search_container input[type="text"]:focus {
+  outline: 0;
+}
+.search_container{
+  border: 2px solid #3879D9;
+  padding: 3px 5px;
+  border-radius: 20px;
+  height: 2.2em;
+  width: 265px;
+  overflow: hidden;
+}
+.search_container input[type="submit"]{
+  cursor: pointer;
+  font-family: FontAwesome;
+  border: none;
+  background: #3879D9;
+  color: #fff;
+  position: absolute;
+  width: 3.5em;
+  height: 3.0em;
+  right:0px;
+  top: -5px;
+  outline : none;
+}
+.search_container ::-webkit-input-placeholder {
+  color: #3879D9;
 }
