@@ -1,5 +1,5 @@
 class Tourist < ApplicationRecord
-    belongs_to :welcome
+    # belongs_to :welcome
     validates :password, presence: true, confirmation: true
     attr_accessor :password, :password_confirmation
     
