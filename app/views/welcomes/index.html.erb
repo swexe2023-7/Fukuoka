@@ -17,6 +17,7 @@
   <div></div>
 </div>
 
+
 <div>
   <hr class="hr1">
 </div>
@@ -24,24 +25,22 @@
 
 <div class = 'map'>
     <%= image_tag 'map.png' %>
-    <p0>筑後</p0>
-    <p1>福岡</p1>
-    <p2>北九州</p2>
-    <p3>筑豊</p3>
+    <p id="chikugo">筑後</p>
+    <p id="fukuoka">福岡</p>
+    <p id="kitakyusyu">北九州</p>
+    <p id="chikuho">筑豊</p>
 </div>
 
-<div class="search">
-<form method="get" action="https://www.google.co.jp/search" target="_blank">
-<input type="text" name="q" class="text" size="31" maxlength="255" value="">
-<input type="submit" name="bt" class="button" value="検索">
-<input type="hidden" name="hl" value="ja">
-<input type="hidden" name="sitesearch" value="ドメイン.com">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<form method="get" action="#" class="search_container">
+  <input type="text" size="25" placeholder="　キーワード検索">
+  <input type="submit" value="&#xf002">
 </form>
-</div>
 
 <div class="age">
 <select name="age">
-<option value="">選択してください</option>
+<option value="">年齢を選択してください</option>
 <option value="18歳未満">18歳未満</option>
 <option value="18-25歳">18-25歳</option>
 <option value="26-35歳">26-35歳</option>
@@ -51,6 +50,8 @@
 </div>
 
 
-<div class="calendar">
-<input type="date" name="calendar" max="9999-12-31">
-</div>
+<form>
+  <lavel>
+    <input type="date" />
+  </label>
+</form>

@@ -13,15 +13,19 @@
  *= require_tree .
  *= require_self
  */
-
+ 
+/*ロゴの設定*/
 .logo img{
     width: 210px;
     margin-top: 14px;
 }
 
+/*ハンバーガーの設定*/
 #humberger {
   float: right;
-  position: relative;
+  position: absolute;
+  top: 80px;
+  right: 50px;
   height: 46px;
   width: 46px;
   display: inline-block;
@@ -49,15 +53,22 @@
 #humberger div:nth-of-type(3) {
   bottom: 10px;
 }
+.sessions_main_path{
+  float: right;
+  position: absolute;
+  top: 80px;
+  right: 100px;
+}
 
+/*地図の設定*/
 .map img{
   width: 100%;
   text-align: center;
   width:600px;
   hight: 600px;
   position: absolute;
-  top:50%;
-  left:150%;
+  top:73%;
+  left:100%;
   transform: translate(-50%,-50%);
 }
 
@@ -66,9 +77,12 @@
     width:600px;
     height: 600px;
     position: relative;
+    display: block;
+    text-align: center;
 }
 
 
+<<<<<<< HEAD
 
 /*p{*/
 /*    position: absolute;*/
@@ -82,84 +96,172 @@
 /*    border: solid 1px #454545;*/
 
 p0{
+=======
+/*<<<<<<< HEAD
+
+
+
+/*>>>>>>> Y
+    
+/*}*/
+
+#chikugo{
+>>>>>>> cb8a86cf0afff27253218cc942ae07d0a15b75bf
     position: absolute;
-    top:65%;
-    left:155%;
+    top:88%;
+    left:105%;
     transform: translate(-50%,-50%);
     padding:0;
     margin:0;
     font-size:40px;
     color: red;
+<<<<<<< HEAD
     border: solid 1px #454545;
 }
     
 /*}*/
+=======
+    border: dashed 2px skyblue;
+}
+>>>>>>> cb8a86cf0afff27253218cc942ae07d0a15b75bf
 
-p1{
-  position: absolute;
-    top:30%;
-    left:145%;
+
+#fukuoka{
+    position: absolute;
+    top:53%;
+    left:95%;
     transform: translate(-50%,-50%);
     padding:0;
     margin:0;
     font-size:40px;
     color: blue;
-    border: solid 1px #454545;
+    border: dashed 2px skyblue;
 }
 
 
-p2{
+#kitakyusyu{
   position: absolute;
-    top:30%;
-    left:177%;
+    top:53%;
+    left:125%;
     transform: translate(-50%,-50%);
     padding:0;
     margin:0;
     font-size:40px;
     color: yellow;
-    border: solid 1px #454545;
+    border: dashed 2px skyblue;
 }
 
 
-p3{
+#chikuho{
   position: absolute;
-    top:40%;
-    left:160%;
+    top:63%;
+    left:110%;
     transform: translate(-50%,-50%);
     padding:0;
     margin:0;
     font-size:40px;
     color: green;
-    border: solid 1px #454545;
+    border: dashed 2px skyblue;
 }
 
 .hr1{
   border-top: 1px solid #000;
 }
 
-.search .text{
-  margin: 0;
-  padding: 0.5em;
-  width: 30%;
-  height: 60px;
-  color: #aaa;
-  border: solid 1px #aaa;
-  border-radius: 2px;
-  position: relative;
-  text-align: center;
+/*年齢の設定*/
+select{
+  margin:20px;
+  padding:10px;
+  margin-top: 0px;
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  transform: translateX(-50%);
 }
-.search .button{
-  margin: 0;
-  padding: 0.5em;
+/*検索窓の設定*/
+.search_container{
+  position: relative;
+  box-sizing: border-box;
+}
+.search_container input[type="text"]{
+  border: none;
+  height: 1.8em;
+}
+.search_container input[type="text"]:focus {
+  outline: 0;
+}
+.search_container{
+  border: 2px solid #3879D9;
+  padding: 3px 5px;
+  border-radius: 20px;
+  height: 2.2em;
+  width: 265px;
+  overflow: hidden;
+  position: absolute;
+  top: 35%;
+  left: 50%; /* 画面の中央に配置する場合 */
+  transform: translateX(-50%);
+}
+.search_container input[type="submit"]{
+  cursor: pointer;
+  font-family: FontAwesome;
+  border: none;
+  background: #3879D9;
   color: #fff;
-  height: 48px;
-  width: 68px;
-  border: 0;
-  background: skyblue;
-  border-radius: 4px;
-  position: relative;
+  position: absolute;
+  width: 3.5em;
+  height: 3.0em;
+  right:0px;
+  top: -5px;
+  outline : none;
 }
-
-.age{
- 
+.search_container ::-webkit-input-placeholder {
+  color: #3879D9;
+}
+/*カレンダーの設定*/
+label {
+  display: inline-block;
+  width: 200px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  position: absolute;
+  top: 282px; /* 適切なマージンや位置に調整 */
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+input[type="date"] {
+  position: absolute;
+  padding: 0 10px;
+  width: 200px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #999;
+  top: 282px; /* labelと同じ高さに配置 */
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+label::before {
+  position: absolute;
+  content: "";
+  top: 282px; /* 適切なマージンや位置に調整 */
+  right: -43px;
+  width: 36px;
+  height: 36px;
+  background-color: #06c;
+  background-image: url("icon_calendar.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  z-index: 999;
+}
+input[type="date"]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+input[type="date"]::-webkit-clear-button{
+  -webkit-appearance: none;
 }
