@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'reservation/index'
+  get 'reservation/new'
+  get 'reservation/create'
+  get 'reservation/edit'
+  get 'reservation/destroy'
   get 'spots/index'
   get 'spots/show'
   get 'tourist/new'
