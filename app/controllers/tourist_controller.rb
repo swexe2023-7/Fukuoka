@@ -1,4 +1,5 @@
 class TouristController < ApplicationController
+  
   def new
     @tourist = Tourist.new
   end
@@ -25,5 +26,6 @@ class TouristController < ApplicationController
   end
 
   def show
+    @tourist = Tourist.find(params[:id])
   end
 end
