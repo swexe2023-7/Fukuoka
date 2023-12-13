@@ -68,7 +68,7 @@
   hight: 600px;
   position: absolute;
   top:73%;
-  left:100%;
+  left:150%;
   transform: translate(-50%,-50%);
 }
 
@@ -93,7 +93,7 @@
 #chikugo{
     position: absolute;
     top:88%;
-    left:105%;
+    left:155%;
     transform: translate(-50%,-50%);
     padding:0;
     margin:0;
@@ -106,7 +106,7 @@
 #fukuoka{
     position: absolute;
     top:53%;
-    left:95%;
+    left:145%;
     transform: translate(-50%,-50%);
     padding:0;
     margin:0;
@@ -119,7 +119,7 @@
 #kitakyusyu{
   position: absolute;
     top:53%;
-    left:125%;
+    left:175%;
     transform: translate(-50%,-50%);
     padding:0;
     margin:0;
@@ -132,7 +132,7 @@
 #chikuho{
   position: absolute;
     top:63%;
-    left:110%;
+    left:160%;
     transform: translate(-50%,-50%);
     padding:0;
     margin:0;
@@ -141,20 +141,53 @@
     border: dashed 2px skyblue;
 }
 
+a.btn1 {
+  color: red;
+  text-decoration: none;
+}
+
+a.btn2 {
+  color: blue;
+  text-decoration: none;
+}
+
+a.btn3 {
+  color: yellow;
+  text-decoration: none;
+}
+
+a.btn4 {
+  color: green;
+  text-decoration: none;
+}
+
 .hr1{
   border-top: 1px solid #000;
 }
 
 /*年齢の設定*/
-select{
+.age{
   margin:20px;
   padding:10px;
   margin-top: 0px;
+  width: 200px;
   position: absolute;
-  top: 45%;
+  top: 29%;
   left: 55%;
   transform: translateX(-50%);
 }
+/*人数の設定*/
+.count{
+  margin:20px;
+  padding:10px;
+  margin-top: 0px;
+  width: 200px;
+  position: absolute;
+  top: 31%;
+  left: 55%;
+  transform: translateX(-50%);
+}
+
 /*検索窓の設定*/
 .search_container{
   position: relative;
@@ -175,7 +208,7 @@ select{
   width: 265px;
   overflow: hidden;
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: 50%; /* 画面の中央に配置する場合 */
   transform: translateX(-50%);
 }
@@ -202,8 +235,8 @@ label {
   border: 2px solid #ccc;
   border-radius: 15px;
   position: absolute;
-  top: 282px; /* 適切なマージンや位置に調整 */
-  left: 40%;
+  top: 300px; /* 適切なマージンや位置に調整 */
+  left: 60%;
   transform: translateX(-50%);
   z-index: 999;
 }
@@ -217,7 +250,7 @@ input[type="date"] {
   box-sizing: border-box;
   font-size: 14px;
   color: #999;
-  top: 282px; /* labelと同じ高さに配置 */
+  top: 300px; /* labelと同じ高さに配置 */
   left: 40%;
   transform: translateX(-50%);
   z-index: 999;
@@ -225,7 +258,7 @@ input[type="date"] {
 label::before {
   position: absolute;
   content: "";
-  top: 282px; /* 適切なマージンや位置に調整 */
+  top: 300px; /* 適切なマージンや位置に調整 */
   right: -43px;
   width: 36px;
   height: 36px;
