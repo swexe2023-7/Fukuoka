@@ -7,6 +7,4 @@
 
 <h2>ご予約ありがとうございます。</h2>
 <%= link_to "トップへ", root_path %>
-<% @tourist.each do |e| %>
-    <%= link_to "マイページへ", "/reservation/#{e.id}" %>
-<% end %>
+<%= link_to "マイページへ", "/reservation/#{session[:tourist_id]}" %>

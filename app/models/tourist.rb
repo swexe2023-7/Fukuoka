@@ -1,7 +1,7 @@
 class Tourist < ApplicationRecord
     # belongs_to :welcome
     has_many :reservation
-    has_many :reservation_sopts
+    has_many :reservation_tours
     validates :password, presence: true, confirmation: true
     attr_accessor :password, :password_confirmation
     
