@@ -2,12 +2,16 @@
 
 one:
   name: MyString
-  picture: MyString
-  address: 1
-  access: MyString
+  picture: 
+  area: 1
+  age: 1
+  number_of_people: 1
+  purpose: 1
 
 two:
   name: MyString
-  picture: MyString
-  address: 1
-  access: MyString
+  picture: 
+  area: 1
+  age: 1
+  number_of_people: 1
+  purpose: 1
