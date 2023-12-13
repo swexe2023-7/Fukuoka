@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_13_065239) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_13_094924) do
   create_table "reservations", force: :cascade do |t|
     t.integer "tourist"
     t.integer "spot_id"
@@ -22,6 +22,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_13_065239) do
 
   create_table "spots", force: :cascade do |t|
     t.string "name"
+    t.binary "picture"
+    t.integer "area"
+    t.integer "age"
+    t.integer "number_of_people"
+    t.integer "purpose"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
