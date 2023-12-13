@@ -5,8 +5,9 @@
 <% end %>
 <br>
 <% if current_user %>
-  <%= link_to "マイページへ" ,tourist_show_path %>
+  <%= link_to "マイページへ", "/reservation/#{session[:tourist_id]}" %>
   <%= link_to "ログアウト" ,sessions_logout_path %>
+  <a href="mojiko.html">門司港</a>
 <% else %>
   <%= link_to "ログイン", sessions_main_path %>
 <% end %>

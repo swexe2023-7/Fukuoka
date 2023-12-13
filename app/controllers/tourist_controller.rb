@@ -1,4 +1,5 @@
 class TouristController < ApplicationController
+  
   def new
     @tourist = Tourist.new
   end
@@ -8,12 +9,12 @@ class TouristController < ApplicationController
       uid: params[:tourist][:uid],
       password: params[:tourist][:password],
       password_confirmation: params[:tourist][:password_confirmation])
-
     if @tourist.save
       puts "OK"
       redirect_to root_path
     else
       puts "NG"
+      puts @tourist.errors.full_messages
       render 'new'
     end
   end
@@ -25,5 +26,6 @@ class TouristController < ApplicationController
   end
 
   def show
+    @tourist = Tourist.find(params[:id])
   end
 end

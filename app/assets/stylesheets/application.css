@@ -82,6 +82,21 @@
 }
 
 
+<<<<<<< HEAD
+
+/*p{*/
+/*    position: absolute;*/
+/*    top:65%;*/
+/*    left:155%;*/
+/*    transform: translate(-50%,-50%);*/
+/*    padding:0;*/
+/*    margin:0;*/
+/*    font-size:40px;*/
+/*    color: red;*/
+/*    border: solid 1px #454545;*/
+
+p0{
+=======
 /*<<<<<<< HEAD
 
 
@@ -91,6 +106,7 @@
 /*}*/
 
 #chikugo{
+>>>>>>> cb8a86cf0afff27253218cc942ae07d0a15b75bf
     position: absolute;
     top:88%;
     left:155%;
@@ -99,8 +115,15 @@
     margin:0;
     font-size:40px;
     color: red;
+<<<<<<< HEAD
+    border: solid 1px #454545;
+}
+    
+/*}*/
+=======
     border: dashed 2px skyblue;
 }
+>>>>>>> cb8a86cf0afff27253218cc942ae07d0a15b75bf
 
 
 #fukuoka{
