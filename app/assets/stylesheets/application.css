@@ -23,14 +23,14 @@
 /*ハンバーガーの設定*/
 /*
 #humberger {
-  float: right;
+  
+  display: inline-block;
+  box-sizing: border-box;float: right;
   position: absolute;
   top: 80px;
   right: 50px;
   height: 46px;
   width: 46px;
-  display: inline-block;
-  box-sizing: border-box;
   background-color: #fff;
   border: 2px solid #444;
   border-radius: 4px;
@@ -75,7 +75,7 @@
 .hamburger-demo-switch{
 	cursor: pointer;
 	position: absolute;
-	right: 80px;
+	right: 50px;
 	top: 80px;
 	z-index: 9999;
 	width: 4em;
@@ -83,7 +83,7 @@
 }
 /* メニュー展開時にハンバーガーアイコンを固定 */
 #hamburger-demo1:checked ~ .hamburger-demo-switch{
-	position: fixed;
+	position: absolute;
 }
 /* ハンバーガーアイコン */
 .hamburger-switch-line1, .hamburger-switch-line1:before, .hamburger-switch-line1:after{
@@ -117,7 +117,7 @@
 }
 /* メニューエリア */
 .hamburger-demo-menuwrap{
-	position: fixed;
+	position: absolute;
 	height: 100%;
 	background: #fafafa; /* メニューエリアの背景色 */
 	padding: 5em 3% 2em;
@@ -143,11 +143,11 @@
 /* メニューエリア･アニメーション */
 	/* 右から */
 #hamburger-demo1:checked ~ .hamburger-demo-menuwrap{
-	left: 30%;
+	left: 80%;
 }
 	/* コンテンツカバー */
 #hamburger-demo1:checked ~ .hamburger-demo-cover{
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -203,13 +203,9 @@
 /*    font-size:40px;*/
 /*    color: red;*/
 /*    border: solid 1px #454545;*/
-p{}
 
-<<<<<<< HEAD
 /*p0{*/
 
-=======
->>>>>>> Y6
 /*<<<<<<< HEAD
 
 
@@ -218,10 +214,6 @@ p{}
     
 /*}*/
 #chikugo{
-<<<<<<< HEAD
-
-=======
->>>>>>> Y6
     position: absolute;
     top:88%;
     left:155%;
@@ -230,24 +222,8 @@ p{}
     margin:0;
     font-size:40px;
     color: red;
-<<<<<<< HEAD
-
-    border: solid 1px #454545;
-/*}*/
-    
-/*}*/
-
     border: dashed 2px skyblue;
 }
-
-=======
-    border: dashed 2px skyblue;
-}
-
-    
-
-
->>>>>>> Y6
 
 
 #fukuoka{
