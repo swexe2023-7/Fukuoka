@@ -57,6 +57,10 @@
 */
 
 
+body{
+  overflow-x: hidden;
+}
+
 
 /*-----------------------新ハンバーガーメニュー--------------------------------*/
 /* 全体調整CSS */
@@ -76,6 +80,7 @@
 	cursor: pointer;
 	position: absolute;
 	right: 50px;
+	left: 1800px;
 	top: 80px;
 	z-index: 9999;
 	width: 4em;
@@ -131,8 +136,11 @@
 /* メニューリスト */
 .hamburger-demo-menulist{
 	margin-right: 3%;
-	padding-left: 5% !important; /* !important不要な場合もあり */
+	padding-left: 5% !important;
 	list-style: none;
+	line-height: 4;
+	margin-top: 110px;
+	text-decoration: underline wavy #FF570D;
 }
 .hamburger-demo-menulist li a{
 	text-decoration: none;
@@ -171,14 +179,27 @@
 
 /*地図の設定*/
 .map img{
-  width: 100%;
+  /*width: 100%;
   text-align: center;
   width:600px;
-  hight: 600px;
+  hight: 600px;*/
   position: absolute;
   top:73%;
   left:150%;
   transform: translate(-50%,-50%);
+  
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  text-align: center;
+  width: 50vw;
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -188,6 +209,9 @@
     position: relative;
     display: block;
     text-align: center;
+    
+    display: block;
+    max-width: 100%; /* 画像が親要素からはみ出ないようにする */
 }
 
 
