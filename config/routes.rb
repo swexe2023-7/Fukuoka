@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'tourspots/new'
+  get 'tourspots/create'
+  get 'tourspots/destroy'
   get 'spot/index'
   get 'spot/new'
   get 'spot/create'
@@ -27,13 +30,17 @@ Rails.application.routes.draw do
   root 'welcomes#index'
   post 'tourist/create'
   post 'sessions/login'
-  resources :spots
+  post 'spot/create'
+  post 'tour/create'
+  resources :spot
   resources :tourist
   resources :sessions
   resources :welcomes
   resources :reservation
   
   get 'reservation/:id', to: 'reservation#show'
+  get 'get_spot/:id', to: 'spot#get_spot'
+  delete 'spot/:id', to: 'spot#destroy'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

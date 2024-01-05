@@ -7,7 +7,10 @@
 <% if current_user %>
   <%= link_to "マイページへ", "/reservation/#{session[:tourist_id]}" %>
   <%= link_to "ログアウト" ,sessions_logout_path %>
-  <a href="/L9/Fukuoka/mojiko.html.erb">門司港</a>
+  <%= link_to "観光地追加" , spot_new_path %>
+  <%= link_to "ツアー追加" , tour_new_path %>
+  <%= link_to "観光地一覧", spot_index_path %>
+  <!--<a href="/L9/Fukuoka/mojiko.html.erb">門司港</a>-->
 <% else %>
   <%= link_to "ログイン", sessions_main_path %>
 <% end %>

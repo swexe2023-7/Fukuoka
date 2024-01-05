@@ -203,25 +203,15 @@
 /*    font-size:40px;*/
 /*    color: red;*/
 /*    border: solid 1px #454545;*/
-p{}
+/*p{}*/
 
-<<<<<<< HEAD
 /*p0{*/
 
-=======
->>>>>>> Y6
-/*<<<<<<< HEAD
 
-
-
-/*>>>>>>> Y
     
 /*}*/
 #chikugo{
-<<<<<<< HEAD
 
-=======
->>>>>>> Y6
     position: absolute;
     top:88%;
     left:155%;
@@ -230,7 +220,6 @@ p{}
     margin:0;
     font-size:40px;
     color: red;
-<<<<<<< HEAD
 
     border: solid 1px #454545;
 /*}*/
@@ -240,14 +229,6 @@ p{}
     border: dashed 2px skyblue;
 }
 
-=======
-    border: dashed 2px skyblue;
-}
-
-    
-
-
->>>>>>> Y6
 
 
 #fukuoka{
@@ -421,4 +402,11 @@ input[type="date"]::-webkit-inner-spin-button{
 }
 input[type="date"]::-webkit-clear-button{
   -webkit-appearance: none;
+}
+
+/*スポットの写真の設定*/
+.spot_picture {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
 }

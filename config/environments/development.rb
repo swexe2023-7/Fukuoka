@@ -69,4 +69,16 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
   config.hosts << "e4219d157d9e451c84a29906d6f1ff9b.vfs.cloud9.us-east-1.amazonaws.com"
   config.hosts << "92e62b2fa831419a88aafe545ccb7f86.vfs.cloud9.us-east-1.amazonaws.com"
+  
+  # config/environments/development.rb
+
+  # Allow console access from specific IP addresses
+  config.web_console.permissions = '157.13.37.253'
+
+  # Alternatively, you can allow a range of IP addresses
+  # config.web_console.permissions = ['157.13.37.253', '192.168.0.0/16']
+
+  # Ensure that other allowed networks are still included
+  config.web_console.whitelisted_ips = '127.0.0.0/127.255.255.255, ::1'
+
 end

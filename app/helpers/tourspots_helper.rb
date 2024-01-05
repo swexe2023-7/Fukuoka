@@ -1,0 +1,2 @@
+module TourspotsHelper
+end

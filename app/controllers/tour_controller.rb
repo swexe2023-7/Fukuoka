@@ -8,7 +8,10 @@ class TourController < ApplicationController
   end
 
   def create
-    @tour = Tour.new(name: params[:name], price: params[:price])
+    @tour = Tour.new(name: params[:tour][:name],
+    price: params[:tour][:price],
+    age: params[:spot][:age], 
+    number_of_people: params[:spot][:number_of_people])
     if @tour.save
       redirect_to root_path
     else

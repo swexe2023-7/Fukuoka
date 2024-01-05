@@ -1,2 +1,15 @@
-<h1>Tour#new</h1>
-<p>Find me in app/views/tour/new.html.erb</p>
+<h1>※このページは開発者ページ！！！見えなくする！！</h1>
+<%= form_for @tour , url: {action: :create} do |f| %>
+<p><%= f.label :name, 'ツアー名' %>
+<%= f.text_field :name %></p>
+<p><%= f.label :price, '値段' %>
+<%= f.number_field :price %></p>
+<%= f.number_field :area %></p>
+<p><%= f.label :age, '年齢(数字で入力! 1:18歳未満 2:18-25歳 3:26-35歳 4:35-49歳 5:50歳以上)' %>
+<%= f.number_field :age %></p>
+<p><%= f.label :number_of_people, '人数(1:1人 2:2~5人 3:それ以上)' %>
+<%= f.number_field :number_of_people %></p>
+<%= f.submit '登録' %>
+<% end %>
+
+<%= link_to "戻る" ,:back %>

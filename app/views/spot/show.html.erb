@@ -1,2 +1,12 @@
-<h1>Spot#show</h1>
-<p>Find me in app/views/spot/show.html.erb</p>
+<% @spot.each do |e| %>
+    <strong><%= e.name %></strong>
+    <!--<div class="spot_picture">-->
+        <%= imgae_tag e.picture width: 220, height: 160, 
+    class: "spot_picture, rounded mx-auto d-block", 
+    style: "object-fit: cover;" %>
+    <!--</div>-->
+    
+
+<% end %>
+<%= link_to 'トップへ', root_path %>
+<%= link_to '戻る', :back %>

@@ -1,2 +1,35 @@
-<h1>Spot#index</h1>
-<p>Find me in app/views/spot/index.html.erb</p>
+<%= link_to root_path, class: 'logo', method: :get do %>
+  <div>
+    <%= image_tag "logo.png" %>
+  </div>
+<% end %>
+<hr>
+<% @spot.each do |e| %>
+    <strong><%= e.name %></strong>
+    <br>
+    <%= image_tag "/get_spot/#{e.id}" , size: '300x200'%>
+    <br>
+    <%= "エリア:" %>
+    <% if e.area == 1 %>
+        <%= "福岡エリア" %>
+    <% elsif e.area == 2 %>
+        <%= "北九州エリア" %>
+    <% elsif e.area == 3 %>
+        <%= "筑豊エリア" %>
+    <% elsif e.area == 4 %>
+        <%= "筑後エリア" %>
+    <% end %>
+    <%= "目的:" %>
+    <% if e.purpose == 1 %>
+        <%= "観光" %>
+    <% elsif e.area == 1 %>
+        <%= "グルメ" %>
+    <% end %>
+    <br>
+    <%= link_to "戻る" ,:back %>
+    <%= link_to '観光地詳細へ',spot_show_path %>
+    <br>
+    <%= link_to '削除', "/spot/#{e.id}", data: {turbo_method: :delete } %>
+    <br>
+    <br>
+<% end %>

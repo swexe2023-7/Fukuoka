@@ -1,0 +1,2 @@
+class Tourspot < ApplicationRecord
+end
