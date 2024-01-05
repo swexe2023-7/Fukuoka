@@ -23,14 +23,14 @@
 /*ハンバーガーの設定*/
 /*
 #humberger {
-  float: right;
+  
+  display: inline-block;
+  box-sizing: border-box;float: right;
   position: absolute;
   top: 80px;
   right: 50px;
   height: 46px;
   width: 46px;
-  display: inline-block;
-  box-sizing: border-box;
   background-color: #fff;
   border: 2px solid #444;
   border-radius: 4px;
@@ -57,6 +57,10 @@
 */
 
 
+body{
+  overflow-x: hidden;
+}
+
 
 /*-----------------------新ハンバーガーメニュー--------------------------------*/
 /* 全体調整CSS */
@@ -75,7 +79,8 @@
 .hamburger-demo-switch{
 	cursor: pointer;
 	position: absolute;
-	right: 80px;
+	right: 50px;
+	left: 1800px;
 	top: 80px;
 	z-index: 9999;
 	width: 4em;
@@ -83,7 +88,7 @@
 }
 /* メニュー展開時にハンバーガーアイコンを固定 */
 #hamburger-demo1:checked ~ .hamburger-demo-switch{
-	position: fixed;
+	position: absolute;
 }
 /* ハンバーガーアイコン */
 .hamburger-switch-line1, .hamburger-switch-line1:before, .hamburger-switch-line1:after{
@@ -117,7 +122,7 @@
 }
 /* メニューエリア */
 .hamburger-demo-menuwrap{
-	position: fixed;
+	position: absolute;
 	height: 100%;
 	background: #fafafa; /* メニューエリアの背景色 */
 	padding: 5em 3% 2em;
@@ -131,8 +136,11 @@
 /* メニューリスト */
 .hamburger-demo-menulist{
 	margin-right: 3%;
-	padding-left: 5% !important; /* !important不要な場合もあり */
+	padding-left: 5% !important;
 	list-style: none;
+	line-height: 4;
+	margin-top: 110px;
+	text-decoration: underline wavy #FF570D;
 }
 .hamburger-demo-menulist li a{
 	text-decoration: none;
@@ -143,11 +151,11 @@
 /* メニューエリア･アニメーション */
 	/* 右から */
 #hamburger-demo1:checked ~ .hamburger-demo-menuwrap{
-	left: 30%;
+	left: 80%;
 }
 	/* コンテンツカバー */
 #hamburger-demo1:checked ~ .hamburger-demo-cover{
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -171,14 +179,27 @@
 
 /*地図の設定*/
 .map img{
-  width: 100%;
+  /*width: 100%;
   text-align: center;
   width:600px;
-  hight: 600px;
+  hight: 600px;*/
   position: absolute;
   top:73%;
   left:150%;
   transform: translate(-50%,-50%);
+  
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  text-align: center;
+  width: 50vw;
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -188,6 +209,9 @@
     position: relative;
     display: block;
     text-align: center;
+    
+    display: block;
+    max-width: 100%; /* 画像が親要素からはみ出ないようにする */
 }
 
 
@@ -203,15 +227,25 @@
 /*    font-size:40px;*/
 /*    color: red;*/
 /*    border: solid 1px #454545;*/
+<<<<<<< HEAD
 /*p{}*/
 
 /*p0{*/
 
+=======
+
+/*p0{*/
+
+/*<<<<<<< HEAD
+>>>>>>> 79d26cfbcc92ff46eb7220533663c97e1989b09a
 
     
 /*}*/
 #chikugo{
+<<<<<<< HEAD
 
+=======
+>>>>>>> 79d26cfbcc92ff46eb7220533663c97e1989b09a
     position: absolute;
     top:88%;
     left:155%;
@@ -220,6 +254,7 @@
     margin:0;
     font-size:40px;
     color: red;
+<<<<<<< HEAD
 
     border: solid 1px #454545;
 /*}*/
@@ -230,6 +265,11 @@
 }
 
 
+=======
+    border: dashed 2px skyblue;
+}
+
+>>>>>>> 79d26cfbcc92ff46eb7220533663c97e1989b09a
 
 #fukuoka{
     position: absolute;

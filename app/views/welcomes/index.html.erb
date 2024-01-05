@@ -1,4 +1,5 @@
 <%= link_to root_path, class: 'logo', method: :get do %>
+<body>
   <div>
     <%= image_tag "logo.png" %>
   </div>
@@ -36,8 +37,11 @@
 		</label>
 		<div class="hamburger-demo-menuwrap">
 			<ul class="hamburger-demo-menulist">
-				<li><a href="#">メニューリスト１</a></li>
-				<li><a href="#">メニューリスト２</a></li>
+				<li><a href="#">マイページ</a></li>
+				<li><a href="#">予約一覧</a></li>
+				<li><a href="/L9/Fukuoka/tourist/create.html.erb">観光地検索</a></li>
+				<li><a href="/L9/Fukuoka/tourist/create.html.erb">宿泊地検索</a></li>
+				<li><a href="#">投稿</a></li>
 			</ul>
 		</div>
 		<div class="hamburger-demo-cover"></div>
@@ -100,3 +104,4 @@
     <input type="date" />
   </label>
 </form>
+</body>
