@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   
   get 'reservation/:id', to: 'reservation#show'
   get 'get_spot/:id', to: 'spot#get_spot'
+  get 'welcomes/fukuoka', to: 'welcomes#fukuoka'
   delete 'spot/:id', to: 'spot#destroy'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

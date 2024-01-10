@@ -402,9 +402,28 @@ input[type="date"]::-webkit-clear-button{
   -webkit-appearance: none;
 }
 
+/* ログアウトボタンの装飾*/
+.logout-link {
+  color: red;
+  border: 1px solid #000;
+  margin: 2em auto;
+  padding: 1em;
+  width: 100%;
+  background-color: #fff;
+}
+
+
 /*スポットの写真の設定*/
 .spot_picture {
   width: 300px;
   height: 200px;
   object-fit: cover;
+}
+
+
+/*福岡地方の観光＆グルメのページ*/
+#fukkan{
+　font-size: 10px;
+　position: center;
+　font-weight: bold;
 }

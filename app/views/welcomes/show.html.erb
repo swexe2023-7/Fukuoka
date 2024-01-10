@@ -1,0 +1,31 @@
+<!-- app/views/welcomes/show.html.erb -->
+<%= link_to root_path, class: 'logo', method: :get do %>
+<body>
+  <div>
+    <%= image_tag "logo.png" %>
+  </div>
+<% end %>
+
+<div class="hamburger-demo-menubox">
+		<input id="hamburger-demo1" type="checkbox" class="input-hidden">
+		<label for="hamburger-demo1" class="hamburger-demo-switch hamburger-demo-switch1">
+			<span class="hamburger-switch-line1"></span>
+		</label>
+		<div class="hamburger-demo-menuwrap">
+			<ul class="hamburger-demo-menulist">
+				<li><a href="#">マイページ</a></li>
+				<li><a href="#">予約一覧</a></li>
+				<li><a href="/L9/Fukuoka/tourist/create.html.erb">観光地検索</a></li>
+				<li><a href="/L9/Fukuoka/tourist/create.html.erb">宿泊地検索</a></li>
+				<li><a href="#">投稿</a></li>
+			</ul>
+		</div>
+		<div class="hamburger-demo-cover"></div>
+	</div>
+
+<div>
+  <hr class="hr1">
+</div>
+
+<p id="fukkan">【福岡地方】おすすめ観光地＆グルメ　一覧！！！</p>
+<p>This is the show action of the WelcomesController.</p>
