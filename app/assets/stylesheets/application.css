@@ -425,5 +425,19 @@ input[type="date"]::-webkit-clear-button{
 #fukkan{
 　font-size: 10px;
 　position: center;
-　font-weight: bold;
+}
+
+img{
+  width: 50%;
+}
+.tower div{
+  text-align: center;
+}
+ul {
+  display: flex;
+  text-align: center;
+}
+
+.flexbox img{
+  width: 50%;
 }
