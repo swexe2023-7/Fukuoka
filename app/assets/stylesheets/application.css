@@ -134,13 +134,14 @@ body{
 	width: 70%;
 }
 /* メニューリスト */
-.hamburger-demo-menulist{
+.hamburger-demo-menulist li{
 	margin-right: 3%;
 	padding-left: 5% !important;
 	list-style: none;
 	line-height: 4;
 	margin-top: 110px;
 	text-decoration: underline wavy #FF570D;
+	margin: 3px 0;
 }
 .hamburger-demo-menulist li a{
 	text-decoration: none;
@@ -426,18 +427,42 @@ input[type="date"]::-webkit-clear-button{
 　font-size: 10px;
 　position: center;
 }
-
-img{
-  width: 50%;
+#kanko1{
+  margin-top: 50px;
+  margin-left: 370px;
 }
 .tower div{
   text-align: center;
 }
-ul {
+
+ul1 {
   display: flex;
   text-align: center;
+  list-style-type: none;
+  padding: 0;
 }
 
 .flexbox img{
   width: 50%;
+}
+
+#tower_pic{
+  width:50%;
+}
+
+#fuk_pic{
+   width: 80%;
+}
+
+ul2{
+  display: grid;
+  grid-template-columns: 2;
+}
+
+.flexbox ul2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  padding: 0; 
+  list-style-type: none;
 }
