@@ -1,2 +1,18 @@
-<h1>Tourspots#new</h1>
-<p>Find me in app/views/tourspots/new.html.erb</p>
+<h1>※このページは開発者ページ！！！見えなくする！！</h1>
+
+<%= form_for @tourspot , url: {action: :create} do |f| %>
+    <%= f.hidden_field :tour_id, :value =>  params[:tour_id] %>
+    <% spot = Spot.all %>
+    <% spot.each do |e| %>
+    <%= e.name %>
+    <%= "id:" %>
+    <%= e.id %>
+    <br>
+    <% end %>
+    <%= f.label :spot_id, 'spot_id' %>
+    <%= f.number_field :spot_id %>
+
+    <%= f.submit '登録' %>
+<% end %>
+
+<%= link_to "戻る" ,:back %>

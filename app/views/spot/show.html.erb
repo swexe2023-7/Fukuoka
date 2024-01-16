@@ -1,12 +1,32 @@
-<% @spot.each do |e| %>
-    <strong><%= e.name %></strong>
-    <!--<div class="spot_picture">-->
-        <%= imgae_tag e.picture width: 220, height: 160, 
-    class: "spot_picture, rounded mx-auto d-block", 
-    style: "object-fit: cover;" %>
-    <!--</div>-->
-    
+<body bgcolor="#e6eae3">
+<h1><font face="serif"><%= @spot.name %></font></h1>
+<br>
 
+<% if @spot.pictureinfo == 1 %>
+    <%= image_tag "/get_spot/#{@spot.id}" , size: '500x375'%>
+<% elsif @spot.pictureinfo == 2 %>
+    <%= image_tag "/get_spot/#{@spot.id}" , size: '300x375'%>
+<% elsif @spot.pictureinfo == 3 %>
+    <% nil %>
 <% end %>
-<%= link_to 'トップへ', root_path %>
+
+<% if @spot.pictureinfo2 == 1 %>
+    <%= image_tag "/get_spot2/#{@spot.id}" , size: '500x375'%>
+<% elsif @spot.pictureinfo2 == 2 %>
+    <%= image_tag "/get_spot2/#{@spot.id}" , size: '300x375'%>
+<% elsif @spot.pictureinfo2 == 3 %>
+    <% nil %>
+<% end %>
+
+<br>
+<br>
+<strong><font color="#808000">この観光地について</font></strong>
+<br>
+<%= @spot.detail %>
+<br>
+<br>
+<strong><font color="#808000">住所</font></strong>
+<P><%= @spot.address %></P>
 <%= link_to '戻る', :back %>
+<%= link_to 'トップへ', root_path %>
+</body>

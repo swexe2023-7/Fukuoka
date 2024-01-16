@@ -6,27 +6,19 @@
 <% end %>
 <br>
 <% if current_user %>
-  <%= link_to "マイページへ", "/reservation/#{session[:tourist_id]}" %>
-  <%= link_to "ログアウト" ,sessions_logout_path %>
-  <%= link_to "観光地追加" , spot_new_path %>
-  <%= link_to "ツアー追加" , tour_new_path %>
-  <%= link_to "観光地一覧", spot_index_path %>
-  <!--<a href="/L9/Fukuoka/mojiko.html.erb">門司港</a>-->
+<nav>
+  <ul>
+  <li><%= link_to "マイページへ", tourist_show_path(id: current_user.id) %></li>
+  <li style="float:right;"><%= link_to "ログアウト" ,sessions_logout_path %></li>
+  <li><%= link_to "観光地追加" , spot_new_path %></li>
+  <li><%= link_to "ツアー追加" , tour_new_path %></li>
+  <li><%= link_to "観光地一覧", spot_index_path %></li>
+  <li><%= link_to "ツアー一覧", tour_index_path %></li>
 <% else %>
-  <%= link_to "ログイン", sessions_main_path %>
+  <li><%= link_to "ログイン", sessions_main_path %></li>
 <% end %>
-
-<%#>
-<div id="humberger">
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
-<#%>
-
-
-
-
+  </ul>
+</nav>
 
 
 <!-- ↓新ハンバーガーメニュー↓ -->
@@ -50,21 +42,37 @@
 </div>
 
 
+<!--<div>-->
+<!--  <hr class="hr1">-->
+<!--</div>-->
 
+<hr>
+<br>
+<br>
+<h4>エリアから検索する場合は地図をクリック！</h4>
 
-
-
-<div>
-  <hr class="hr1">
-</div>
-
+<h5>人数検索</h5>
+<%= link_to "1人", tour_search_guests1_path %>
+<%= link_to "2~5人 ", tour_search_guests2_path%>
+<%= link_to "それ以上", tour_search_guests3_path %>
 
 <div class = 'map'>
     <%= image_tag 'map.png' %>
+<<<<<<< HEAD
     <p id="chikugo"><a href="welcomes/chikugo" class="btn1">筑後</a></p>
     <p id="fukuoka"><a href="welcomes/fukuoka" class="btn2">福岡</a></p>
     <p id="kitakyusyu"><a href="welcomes/kitakyusyu" class="btn3">北九州</a></p>
     <p id="chikuho"><a href="welcomes/chikuho" class="btn4">筑豊</a></p>
+=======
+    <!--<p id="chikugo"><a href="#" class="btn1">筑後</a></p>-->
+    <%= link_to "筑後", spot_search3_path, id: "chikugo", class: "btn1" %>
+    <%= link_to "福岡", spot_search1_path, id: "fukuoka", class: "btn2" %>
+    <%= link_to "北九州", spot_search2_path, id: "kitakyusyu", class: "btn3" %>
+    <%= link_to "筑豊", spot_search4_path, id: "chikuho", class: "btn4" %>
+    <!--<p id="fukuoka"><a href="#" class="btn2">福岡</a></p>-->
+    <!--<p id="kitakyusyu"><a href="#" class="btn3">北九州</a></p>-->
+    <!--<p id="chikuho"><a href="#" class="btn4">筑豊</a></p>-->
+>>>>>>> X10
 </div>
 
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -74,29 +82,30 @@
   <input type="submit" value="&#xf002">
 </form>
 
-<div class="age">
-<select name="age">
-<option value="">年齢を選択してください</option>
-<option value="18歳未満">18歳未満</option>
-<option value="18-25歳">18-25歳</option>
-<option value="26-35歳">26-35歳</option>
-<option value="35-49歳">35-49歳</option>
-<option value="50歳以上">50歳以上</option>
-</select>
-</div>
+<!--<div class="age">-->
+<!--<select name="age">-->
+<!--<option value="">年齢を選択してください</option>-->
+<!--<option value="18歳未満">18歳未満</option>-->
+<!--<option value="18-25歳">18-25歳</option>-->
+<!--<option value="26-35歳">26-35歳</option>-->
+<!--<option value="35-49歳">35-49歳</option>-->
+<!--<option value="50歳以上">50歳以上</option>-->
+<!--</select>-->
+<!--</div>-->
 
 
 
-<div class="count">
-<select name="count">
-<option value="">人数を選択してください</option>
-<option value="18歳未満">1人</option>
-<option value="18-25歳">2人</option>
-<option value="26-35歳">3人</option>
-<option value="35-49歳">4人</option>
-<option value="50歳以上">5人以上</option>
-</select>
-</div>
+
+<!--<div class="count">-->
+<!--<select name="count">-->
+<!--<option value="">人数を選択してください</option>-->
+<!--<option value="18歳未満">1人</option>-->
+<!--<option value="18-25歳">2人</option>-->
+<!--<option value="26-35歳">3人</option>-->
+<!--<option value="35-49歳">4人</option>-->
+<!--<option value="50歳以上">5人以上</option>-->
+<!--</select>-->
+<!--</div>-->
 
 
 <form>

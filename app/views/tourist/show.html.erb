@@ -5,13 +5,15 @@
 <% end %>
 <hr>
 
-<srtong>
-  <%= @tourist.uid %>
+
+<link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
+
+<h3>
+  <%= @tourist.uid %></h3>
   さんのマイページ
 </srtong>
 <br>
 <br>
 
-<h4>予約履歴</h4>
+<%= link_to '予約一覧へ', reservations_record_path(tourist_id: @tourist.id) %>
 
-<!--reservation_idから予約を表示する-->

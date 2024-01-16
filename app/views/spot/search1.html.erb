@@ -7,6 +7,7 @@
 
 <div class="parent">
 <% @spot.each do |e| %>
+<% if e.area == 1 %>
 <div class="child">
     <strong><font face="ＭＳ 明朝"><%= e.name %></font></strong>
     <br>
@@ -16,7 +17,7 @@
     <%= image_tag "/get_spot/#{e.id}" , size: '225x300'%>
     <% end %>
     <br>
-    <%= e.id %>
+
     <%= "エリア:" %>
     <% if e.area == 1 %>
         <%= "福岡エリア" %>
@@ -44,5 +45,7 @@
     <br>
     </div>
 <% end %>
+<% end %>
 </div>
+
 <%= link_to "前ページに戻る" ,:back %>

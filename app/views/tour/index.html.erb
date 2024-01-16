@@ -1,2 +1,36 @@
-<h1>Tour#index</h1>
-<p>Find me in app/views/tour/index.html.erb</p>
+<%= link_to root_path, class: 'logo', method: :get do %>
+  <div>
+    <%= image_tag "logo.png" %>
+  </div>
+<% end %>
+<hr>
+
+<h2>ツアー一覧</h2>
+
+<div class="parent">
+<% @tour.each do |e| %>
+<div class="child">
+    <strong><font face="ＭＳ 明朝"><%= e.name %></font></strong>
+    <br>
+
+    <% tourspot = Tourspot.find(e.id) %>
+    <% spot = Spot.find(tourspot.spot_id) %>
+    <%= "エリア:" %>
+    <% if spot.area == 1 %>
+        <%= "福岡エリア" %>
+    <% elsif spot.area == 2 %>
+        <%= "北九州エリア" %>
+    <% elsif spot.area == 4 %>
+        <%= "筑豊エリア" %>
+    <% elsif spot.area == 3 %>
+        <%= "筑後エリア" %>
+    <% end %>
+
+    <%= link_to '観光地を追加', tourspots_new_path(tour_id: e.id) %>
+    <%= link_to 'ツアー詳細へ', "/tour/#{e.id}" %>
+    <br>
+    <br>
+    </div>
+<% end %>
+</div>
+<%= link_to "前ページに戻る" ,:back %>
