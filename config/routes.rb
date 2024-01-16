@@ -54,14 +54,14 @@ Rails.application.routes.draw do
   get 'reservation/:id', to: 'reservation#show'
   get 'reservations/:id', to: 'reservations#record'
   get 'get_spot/:id', to: 'spot#get_spot'
-<<<<<<< HEAD
+
   get 'welcomes/fukuoka', to: 'welcomes#fukuoka'
   get 'welcomes/kitakyusyu', to: 'welcomes#kitakyusyu'
   get 'welcomes/chikuho', to: 'welcomes#chikuho'
   get 'welcomes/chikugo', to: 'welcomes#chikugo'
-=======
+
   get 'get_spot2/:id', to: 'spot#get_spot2'
->>>>>>> X10
+
   delete 'spot/:id', to: 'spot#destroy'
   get 'spot/:id', to: 'spot#show'
   get 'spot/:id/edit', to: 'spot#edit'
