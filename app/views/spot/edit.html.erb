@@ -1,2 +1,19 @@
-<h1>Spot#edit</h1>
-<p>Find me in app/views/spot/edit.html.erb</p>
+<%= form_for @spot , url: {action: :update} do |f| %>
+<%= f.label :name, '観光地名' %>
+<%= f.text_field :name %>
+<p><%= f.label :picture, '写真データ1(トップ画面で表示される)' %>
+<%= f.file_field :picture %></p>
+<p><%= f.label :picture2, '写真データ2(詳細ページで表示される)' %>
+<%= f.file_field :picture2 %></p>
+<p><%= f.label :area, 'エリア(数字で入力! 1:福岡 2:北九州 3:筑後 4:筑豊)' %>
+<%= f.number_field :area %></p>
+<p><%= f.label :purpose, '目的(数字で入力! 1:観光 2:グルメ)' %>
+<%= f.number_field :purpose %></p>
+<p><%= f.label :address2, '住所' %>
+<%= f.text_field :address2 %></p>
+<%= f.label :detail, '観光地の説明' %>
+<%= f.text_field :detail %>
+<%= f.submit '更新' %>
+<% end %>
+
+<%= link_to "戻る" ,:back %>

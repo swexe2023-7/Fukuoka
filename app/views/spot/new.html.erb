@@ -1,17 +1,23 @@
 <h1>※このページは開発者ページ！！！見えなくする！！</h1>
 <%= form_for @spot , url: {action: :create} do |f| %>
-<p><%= f.label :name, '観光地名' %>
-<%= f.text_field :name %></p>
-<p><%= f.label :picture, '写真データ' %>
+<%= f.label :name, '観光地名' %>
+<%= f.text_field :name %>
+<p><%= f.label :picture, '写真データ1(トップ画面で表示される)' %>
 <%= f.file_field :picture %></p>
+<p><%= f.label :pictureinfo, '写真データ1(数字で入力! 1:横　2:縦　3:画像がないとき)' %>
+<%= f.number_field :pictureinfo %></p>
+<p><%= f.label :picture2, '写真データ2(詳細ページで表示される)' %>
+<%= f.file_field :picture2 %></p>
+<p><%= f.label :pictureinfo2, '写真データ2(数字で入力! 1:横　2:縦　3:画像がないとき)' %>
+<%= f.number_field :pictureinfo2 %></p>
 <p><%= f.label :area, 'エリア(数字で入力! 1:福岡 2:北九州 3:筑後 4:筑豊)' %>
 <%= f.number_field :area %></p>
-<p><%= f.label :age, '年齢(数字で入力! 1:18歳未満 2:18-25歳 3:26-35歳 4:35-49歳 5:50歳以上)' %>
-<%= f.number_field :age %></p>
-<p><%= f.label :number_of_people, '人数(1:1人 2:2~5人 3:それ以上)' %>
-<%= f.number_field :number_of_people %></p>
 <p><%= f.label :purpose, '目的(数字で入力! 1:観光 2:グルメ)' %>
 <%= f.number_field :purpose %></p>
+<p><%= f.label :address2, '住所' %>
+<%= f.text_field :address2 %></p>
+<%= f.label :detail, '観光地の説明' %>
+<%= f.text_field :detail %>
 <%= f.submit '登録' %>
 <% end %>
 

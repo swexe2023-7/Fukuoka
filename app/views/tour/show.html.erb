@@ -1,0 +1,43 @@
+<%= link_to root_path, class: 'logo', method: :get do %>
+  <div>
+    <%= image_tag "logo.png" %>
+  </div>
+<% end %>
+<hr>
+
+<body bgcolor="#e6eae3">
+<% tour = Tour.find(params[:id]) %>
+<h1><font face="serif"><%= tour.name %></font></h1>
+<br>
+
+<strong><font color="#808000">観光先</font></strong>
+<br>
+
+
+
+<% @tourspot.each do |e| %>
+    <% tour_spot = Spot.find(e.spot_id) %>
+    <%= "・" %>
+
+
+    <%= link_to tour_spot.name, "/spot/#{tour_spot.id}" %>
+    <br>
+<% end %>
+<br>
+<strong><font color="#808000">金額</font></strong>
+<br>
+<%= tour.price %>
+<%= "円" %>
+<br>
+<br>
+<strong><font color="#808000">タイムテーブル</font></strong>
+<br>
+<%= tour.schedule %>
+<br>
+<br>
+<%= link_to 'ご予約へ', new_reservation_path(tour_id: tour.id, tourist_id: current_user.id) %>
+
+<br>
+<%= link_to '戻る', :back %>
+<%= link_to 'トップへ', root_path %>
+</body>

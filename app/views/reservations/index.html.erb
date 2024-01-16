@@ -1,0 +1,16 @@
+<%= link_to root_path, class: 'logo', method: :get do %>
+  <div>
+    <%= image_tag "logo.png" %>
+  </div>
+<% end %>
+<hr>
+
+
+
+<% @reservations.each do |e| %>
+  <% if e.id == @new_reservation_id %>
+    <h2>ご予約ありがとうございます。</h2>
+    <%= link_to "トップへ", root_path %>
+    <%= link_to "マイページへ", tourist_show_path(id: e.tourist_id) %>
+  <% end %>
+<% end %>

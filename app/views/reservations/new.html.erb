@@ -1,0 +1,32 @@
+<%= link_to root_path, class: 'logo', method: :get do %>
+  <div>
+    <%= image_tag "logo.png" %>
+  </div>
+<% end %>
+<hr>
+
+<%= form_for @reservation , url: {action: :create} do |f| %>
+    <%= f.hidden_field :tourist_id, value: @tourist_id %>
+    <%= f.hidden_field :tour_id, value: @tour_id  %>
+    <% tourist = Tourist.find(params[:tourist_id]) %>
+
+    <%= "氏名" %>
+    <%= tourist.uid %>
+    
+    <br>
+
+    <% tour = Tour.find(params[:tour_id]) %>
+
+    <%= "ツアー名" %>
+    <%= tour.name %>
+
+    <br>
+    
+    <%= f.label :guests, '人数' %>
+    <%= f.number_field :guests %>
+    <%= f.label :date, '日付' %>
+    <%= f.date_field :date %>
+    <%= f.submit '予約確定' %>
+<% end %>
+
+<%= link_to "戻る" ,:back %>

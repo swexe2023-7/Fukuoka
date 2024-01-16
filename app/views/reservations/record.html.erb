@@ -1,0 +1,28 @@
+<%= link_to root_path, class: 'logo', method: :get do %>
+  <div>
+    <%= image_tag "logo.png" %>
+  </div>
+<% end %>
+<hr>
+
+<h2>予約一覧</h2>
+<strong><font color="#808000">予約順</font></strong>
+<br>
+<br>
+<% @reservation_record.each do |e| %>
+    <% tour_name = Tour.find(e.tour_id) %>
+    <%= "ツアー名：" %>
+    <%= tour_name.name %>
+    <br>
+    <%= "人数：" %>
+    <%= e.guests %>
+    <%= "名" %>
+    <br>
+    <%= "日付：" %>
+    <%= e.date %>
+    <br>
+    <br>
+    <hr class="cp_hr02" />
+    <br>
+    <br>
+<% end %>

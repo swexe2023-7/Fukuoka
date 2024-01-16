@@ -1,0 +1,58 @@
+<%= link_to root_path, class: 'logo', method: :get do %>
+  <div>
+    <%= image_tag "logo.png" %>
+  </div>
+<% end %>
+<hr>
+
+<div class="parent">
+<% @tour.each do |e| %>
+<% if e.age == 2 %>
+<div class="child">
+    <% @tourspot = Tourspot.where(tour_id: e.id) %>
+    <% @tourspot.each do |f| %>
+    
+    <% @spots = Spot.where(f.spot_id) %>
+    <% @spots.each do |spot| %>
+    <strong><font face="ＭＳ 明朝"><%= spot.name %></font></strong>
+    <br>
+    <% if spot.pictureinfo == 1 %>
+    <%= image_tag "/get_spot/#{spot.id}" , size: '300x200'%>
+    <% elsif spot.pictureinfo == 2 %>
+    <%= image_tag "/get_spot/#{spot.id}" , size: '225x300'%>
+    <% end %>
+    <br>
+
+    <%= "エリア:" %>
+    <% if spot.area == 1 %>
+        <%= "福岡エリア" %>
+    <% elsif spot.area == 2 %>
+        <%= "北九州エリア" %>
+    <% elsif spot.area == 3 %>
+        <%= "筑豊エリア" %>
+    <% elsif spot.area == 4 %>
+        <%= "筑後エリア" %>
+    <% end %>
+    <%= "目的:" %>
+    <% if spot.purpose == 1 %>
+        <%= "観光" %>
+    <% elsif spot.purpose == 2 %>
+        <%= "グルメ" %>
+    <% end %>
+    <br>
+    <%= spot.address2 %>
+
+    <%= link_to '観光地詳細へ', "/spot/#{spot.id}" %>
+    <br>
+
+
+    <br>
+    <br>
+    <% end %>
+<% end %>
+    </div>
+<% end %>
+<% end %>
+</div>
+
+<%= link_to "前ページに戻る" ,:back %>
