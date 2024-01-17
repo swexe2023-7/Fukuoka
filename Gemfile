@@ -69,7 +69,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 
-  # gem 'carrierwave'
+  gem 'carrierwave'
 
   gem "pg", "~> 1.4", group: :production
 end
